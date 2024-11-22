@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shay Neufeld - Neuroscientist</title>
+<style>
+    /* Base Styles */
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+    }
+    header {
+        background: #333;
+        color: white;
+        padding: 1rem 2rem;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap; /* Allow wrapping for small screens */
+    }
+    header .name {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-right: auto;
+    }
+    header nav {
+        flex-grow: 1;
+        text-align: center;
+    }
+    header nav a {
+        color: white;
+        text-decoration: none;
+        font-size: 1rem;
+        margin: 0 1rem;
+    }
+    header nav a:hover {
+        text-decoration: underline;
+    }
+    .container {
+        padding: 2rem;
+        margin-top: 70px;
+    }
+    section {
+        padding: 4rem 2rem;
+        border-bottom: 1px solid #ccc;
+    }
+    section h2 {
+        font-size: 1.8rem;
+        color: #333;
+    }
+
+    /* Media Queries for Mobile Screens */
+    @media (max-width: 768px) {
+        header {
+            flex-direction: column; /* Stack header content vertically */
+            align-items: flex-start; /* Align items to the left */
+        }
+        header .name {
+            margin-bottom: 1rem; /* Add space between name and nav */
+        }
+        header nav {
+            text-align: left; /* Align navigation links to the left */
+        }
+        header nav a {
+            display: block; /* Stack links vertically */
+            margin: 0.5rem 0; /* Add spacing between links */
+        }
+        section {
+            padding: 2rem 1rem; /* Reduce padding for smaller screens */
+        }
+        section h2 {
+            font-size: 1.5rem; /* Adjust font size for headers */
+        }
+        .container {
+            padding: 1rem; /* Smaller padding for overall content */
+        }
+    }
+
+    @media (max-width: 480px) {
+        header .name {
+            font-size: 1.2rem; /* Smaller font for the name */
+        }
+        header nav a {
+            font-size: 0.9rem; /* Smaller font for navigation links */
+        }
+        section h2 {
+            font-size: 1.2rem; /* Smaller font size for section headers */
+        }
+    }
+</style>
+
+</head>
+<body>
+<header>
+    <div class="name">
+        <a href="#shay-neufeld" style="color: white; text-decoration: none;">Shay Neufeld</a>
+    </div>
+    <nav>
+        <a href="#software">Software</a>
+        <a href="#publications">Publications</a>
+        <a href="#writing">Writing</a>
+        <a href="#talking">Talking</a>
+        <a href="#teaching">Teaching & Outreach</a>
+    </nav>
+</header>
+<div class="container">
+    <section id="shay-neufeld">
+        <h2>Shay Neufeld</h2>
+        <p>I am a <strong>neuroscientist</strong> and <strong>tool developer</strong> with a passion for creating products that make 
+        data analytics more accessible, interpretable, and reusable. I am currently 
+        the <strong>senior director of data products and analytics</strong> at <a href="https://www.inscopix.com" target="_blank">Inscopix</a>
+        (a <a href="https://www.brukercom" target="_blank">Bruker</a> company), 
+        where I oversee groups of computational scientists, data engineers, and 
+        software engineers who work together to create software products for enabling 
+        and accelerating neuroscience research.</p>
+        <p> My previous industry experiences 
+        include <strong>architecting a machine learning software product</strong> to improve preclinical 
+        rodent behavior screening (BlackBoxBio), working as a <strong>senior data scientist</strong>
+        to create data products that government and healthcare authorities can 
+        use to drive policy decision making (<a href="https://forwardplatform.com/" target="_blank">LiveStories</a>, 
+        now FORWARD), and advising as a 
+        <strong>machine learning product consultant</strong> for a variety of start-ups 
+        (with <a href="https://www.madronavl.com/" target="_blank"> Madrona Venture Labs</a>).</p> 
+        
+        <p>I hold a PhD in neuroscience from Harvard and 
+        a BSc in neuroscience and physics from McGill.</p>
+        
+    </section>
+    <section id="software">
+        <h2>Software</h2>
+        <p>Placeholder for Software content.</p>
+    </section>
+    <section id="publications">
+        <h2>Publications</h2>
+        <p>Placeholder for Publications content.</p>
+    </section>
+    <section id="writing">
+        <h2>Writing</h2>
+        <p>Placeholder for Writing content.</p>
+    </section>
+    <section id="talking">
+        <h2>Talking</h2>
+        <p>Placeholder for Talking content.</p>
+    </section>
+    <section id="teaching">
+        <h2>Teaching & Outreach</h2>
+        <p>Placeholder for Teaching and Outreach content.</p>
+    </section>
+</div>
+</body>
+</html>
