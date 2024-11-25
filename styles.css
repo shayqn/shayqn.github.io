@@ -4,7 +4,7 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    padding-top:50px;
+    padding-top:80px;
 }
 body a {
     color:black; /* Make links black (optional) */
@@ -15,10 +15,14 @@ body a:hover {
         text-decoration: underline; /* Add underline back on hover (optional) */
     }
     
+body.publications a {
+    text-decoration: underline; /* Underlined links */
+}
+    
 header {
     background: #333;
     color: white;
-    padding: 1rem 2rem;
+    padding: 1rem 1rem;
     position: fixed;
     width: 100%;
     top: 0;
@@ -27,11 +31,14 @@ header {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap; /* Allow wrapping for small screens */
+    box-sizing: border-box;
+    padding-top: 25px;
 }
 header .name {
     font-size: 1.5rem;
     font-weight: bold;
     margin-right: auto;
+    height:50px
 }
 
 header .name a {
@@ -144,3 +151,52 @@ section h2 {
 .social-icon:hover {
     opacity: 0.7; /* Optional hover effect */
 }
+
+/* Publications Page */
+#publications {
+    margin: 2rem auto;
+    max-width: 1000px;
+    padding: 1rem 2rem;
+}
+
+.publication {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Distribute space equally */
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    border-bottom: 1px solid #ccc;
+}
+
+
+.publication-icon img {
+    width: 50px;
+    height: auto;
+    margin-right: 1rem;
+}
+
+.publication-details {
+    flex-grow: 1;
+}
+
+
+.publication-download a {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Ensure icons are centered */
+    height: 40px; /* Set a fixed height for consistency */
+    width: 40px; /* Ensure square icons */
+}
+
+
+.publication-download a:hover {
+    background-color: #555;
+    
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
