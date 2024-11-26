@@ -5,6 +5,8 @@ body {
     margin: 0;
     padding: 0;
     padding-top:80px;
+    
+    max-width: 100%;
 }
 body a {
     color:black; /* Make links black (optional) */
@@ -69,9 +71,12 @@ section {
     margin: 0 auto; /* Center align the section */
 }
 section h2 {
+    padding-top: 100px;
     font-size: 1.8rem;
     color: #333;
 }
+
+
 
 /* Media Queries for Mobile Screens */
 @media (max-width: 768px) {
@@ -158,7 +163,11 @@ section h2 {
     margin: 2rem auto;
     max-width: 1000px;
     padding: 1rem 2rem;
+    line-height: 1.6;
+    padding-top:5px;
 }
+
+
 
 .publication {
     display: flex;
@@ -195,17 +204,30 @@ section h2 {
     
 }
 
-h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    color: #333;
-}
 
 /* Articles Page */
+
+/* Publications Page */
+#articles {
+    margin: 2rem auto;
+    max-width: 1000px;
+    padding: 1rem 2rem;
+    line-height: 1.6;
+    padding-top:5px;
+}
+
+.article {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Distribute space equally */
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    border-bottom: 1px solid #ccc;
+}
 .articles-container {
     max-width: 800px; /* Same as the index page container */
     margin: 0 auto; /* Center the container */
-    padding: 2rem; /* Add padding inside the container */
+    padding: 0; /* Add padding inside the container */
 }
 
 .article-item {
