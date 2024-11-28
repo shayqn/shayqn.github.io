@@ -282,3 +282,45 @@ section h2 {
     }
 }
 
+/* Software Section */
+#software {
+    margin: 2rem auto;
+    max-width: 1000px;
+    padding: 1rem 2rem;
+    line-height: 1.6;
+    padding-top:5px;
+}
+
+.software-item {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    border-bottom: 1px solid #ccc;
+}
+
+.software-item h3 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.8rem; /* Match other titles if necessary */
+    font-weight: bold;
+    color: #333;
+}
+.software-item p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+.software-link {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.software-link:hover {
+    background-color: #555;
+}
+
