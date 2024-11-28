@@ -44,18 +44,56 @@
         <section id="software">
             <h2>Software Products and Python Packages</h2>
             <div class="software-item">
-                <h3>the IDEAS platform (SaaS)</h3>
-                <p>My Inscopix team of talented software engineers and computational scientists built (and continues to build) the Inscopix Data Exploration, Analysis, and Sharing (IDEAS) cloud platform.
-                    IDEAS is made for organizing and large large calcium imaging and behavior datasets (we are working on expanding to other data modalities!). </p>
+                <h3><a href="https://inscopix.cloud" target="_blank">the IDEAS platform</a> (SaaS)</h3>
+                <p>The Inscopix Data Products team, composed of talented software engineers and computational scientists, built (and continues to build) the Inscopix Data Exploration, Analysis, and Sharing (IDEAS) cloud platform.
+                    <strong>IDEAS is made for organizing and analyzing calcium imaging and behavior datasets at scale </strong> (we are working on expanding to other data modalities!). </p>
                 <p>The overarching goal of IDEAS is to abstract away a lot of the database + data engineering required to responsibly and reproducibly process 
                 terabytes of imaging data into insights about how neural activity gives rise to behavior. We want scientists to focus on asking the right questions, collecting the right data, and interpreting the results - 
                 without needing to be software developers, site reliability engineers, cloud computing maestros, and Python-dependency snake charmers all at the same time. </p>
-                <p> In addition to offering Inscopix's own algorithms for processing and analyzing miniscope & behavior data, IDEAS also hosts popular open source packages like DeepLabCut, suite2P, and CaImAn so 
+                <p> In addition to offering Inscopix's own algorithms for processing and analyzing miniscope & behavior data, IDEAS also hosts popular open source packages like <a href = "https://www.mackenziemathislab.org/deeplabcut" 
+                    target="_blank">DeepLabCut</a>, 
+                    <a href = "https://www.suite2p.org/" target="_blank">suite2P</a>, and <a href = "https://github.com/flatironinstitute/CaImAn" target="_blank">CaImAn</a> so 
                     researchers can more easily use these cutting edge methods without studying for a CS degree on the side.
                 </p>
                 <p>Since commercially launching in 2023, IDEAS users have uploaded & generated over 50 terabytes of data, and successfully executed over 15000 analysis tasks! </p>
                 <a href="https://inscopix.cloud/" target="_blank" class="software-link">IDEAS homepage</a>
             </div>
+
+            <div class="software-item">
+                <h3><a href="https://inscopix.com/software-analysis-miniscope-imaging/" target="_blank">Inscopix Data Processing Software</a> (Desktop App)</h3>
+                <p>The Inscopix Data Products team also develops and maintains the Inscopix Data Processing Software (IDPS) desktop application. IDPS is built to visualize data acquired with Inscopix systems, 
+                    including miniscopes (nVista, nVoke, nVue) and behavior cameras (nVision). IDPS also offers processing algorithms for extracting both neural activity and hemodynamics from miniscope movie data.</p>
+                <p>IDPS can be installed on Mac, Linux, or Windows machines, and is built in C++. This is great for fast performance, but does limits the kinds of analysis methods we can easily implement 
+                    (one of the motivations for building IDEAS).</p>
+                <p>Since the release of v1.0 in 2016, Neuroscientists have used IDPS to help process and analyze miniscope data in hundreds of publications.</p>
+                <a href="https://inscopix.com/software-analysis-miniscope-imaging/" target="_blank" class="software-link">IDPS product info</a>
+            </div>
+
+
+            <div class="software-item">
+                <h3>Inscopix Open Source Python Packages</h3>
+
+                <p><a href="https://github.com/inscopix/pyisx" target="_blank"><strong>pyisx</strong></a> is a free, open source Python package for reading and writing Inscopix data.</p>
+
+                <p><a href="https://github.com/inscopix/inscopix-cnmfe" target="_blank"><strong>Inscopix CNMF-E</strong></a> is our C++ implementation of the innovative <a href = "https://elifesciences.org/articles/28728"
+                    target="_blank">Constrained Nonnegative Matrix Factorization for Endoscopic data</a> for extracting single cell activity from 1-photon calcium imaging data. We undertook this project so we could offer CNMF-E in our 
+                C++ desktop application IDPS. While nearly identical in terms of outputs, the C++ implementation does offer some computational optimizations over it's <a href = "https://github.com/flatironinstitute/CaImAn"
+                target="_blank">sibling Python version.</a> You can read more about its <a href = "https://inscopix.com/2021/12/inscopix-cnmf-e/" target="_blank">release</a> as well as a <a href = "https://github.com/inscopix/inscopix-cnmfe/blob/main/docs/comparison_to_caiman.md"
+                target="_blank">comprehensive comparison</a> to the original Python implementation from the Flatiron Institute.</p>
+
+                <p><strong>IDEAS toolboxes</strong> | the Inscopix Data Product team has implemented several open-source packages as tools available to run on IDEAS. This involves containerizing the code (using Docker), and adding various annotations so the workflows 
+                    can easily integrate into the IDEAS platform and be used without any additional lines of code or software dependency wrangling. 
+                    <ul>
+                        <li><a href = "https://github.com/inscopix/ideas-toolbox-suite2p" target="_blank"><strong>suite2p</strong></a> | for processing 2-photon calcium imaging data</li>
+                        <li><a href = "https://github.com/inscopix/ideas-toolbox-deeplabcut" target="_blank"><strong>DeepLabCut</strong></a> | for machine-learning based behavior pose estimation</li>
+                        <li><a href = "https://github.com/inscopix/ideas-public-python-utils" target="_blank"><strong>IDEAS Python Utils</strong></a> | utilites and functions for building IDEAS tools</li>
+                    </ul>
+
+
+                <a href="https://github.com/inscopix" target="_blank" class="software-link">Inscopix GitHub homepage</a>
+            </div>
+
+
         </section>
 </body>
 </html>
