@@ -14,6 +14,15 @@
   <!-- Canonical to .com -->
   <link rel="canonical" href="https://shayneufeld.com/" />
 
+  <!-- Open Graph / social previews -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://shayneufeld.com/" />
+  <meta property="og:title"       content="Shay Neufeld – Neuroscientist & Product Leader" />
+  <meta property="og:description" content="Neuroscientist, product builder, and team leader developing brain–machine interface technology to help people recover function after brain injury and disease." />
+  <meta property="og:image"       content="https://shayneufeld.com/shay-headshot.jpeg" />
+  <meta name="twitter:card"       content="summary_large_image" />
+  <meta name="twitter:site"       content="@noisyneuron" />
+
   <!-- Person schema.org JSON-LD -->
   <script type="application/ld+json">
   {
@@ -23,7 +32,7 @@
     "url": "https://shayneufeld.com/",
     "image": "https://shayneufeld.com/shay-headshot.jpeg",
     "jobTitle": "Neuroscientist and Product Leader",
-    "description": "Neuroscientist, product builder, and team leader developing brain–machine interface technology.",
+    "description": "Neuroscientist, product builder, and team leader developing brain–computer interface technology.",
     "sameAs": [
       "https://ca.linkedin.com/in/shay-neufeld",
       "https://scholar.google.com/citations?user=iYgfipIAAAAJ",
@@ -105,13 +114,13 @@
       }
     }
 
-    /* Top row: name + toggle */
-    .top-row {
+    /* Name row: name + toggle */
+    .name-row {
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 12px;
-      margin-bottom: 18px;
+      margin-bottom: 10px;
     }
 
     /* Toggle */
@@ -142,17 +151,20 @@
       font-size: 0.9rem;
     }
 
+    /* Name heading */
+    .name-heading {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--text-color);
+      margin-bottom: 0;
+    }
+
     /* Main text */
     .bio {
       font-size: 0.98rem;
       line-height: 1.6;
       color: var(--muted-color);
       margin-bottom: 20px;
-    }
-
-    .bio strong {
-      font-weight: 600;
-      color: var(--text-color);
     }
 
     /* Links row */
@@ -211,6 +223,22 @@
       stroke: #f9fafb;
     }
 
+    /* Fade-in on load */
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .shell {
+      animation: fadeUp 0.5s ease both;
+    }
+
     /* Accessibility: reduce motion */
     @media (prefers-reduced-motion: reduce) {
       * {
@@ -227,8 +255,8 @@
         border-radius: 16px;
       }
 
-      .name {
-        font-size: 1.05rem;
+      .name-heading {
+        font-size: 1.25rem;
       }
 
       .bio {
@@ -239,31 +267,30 @@
 </head>
 <body>
   <main class="shell" aria-label="Profile for Shay Neufeld">
-    <header class="top-row">
-  <div aria-hidden="true"></div> <!-- keeps layout spacing -->
-  <button
-    class="theme-toggle"
-    type="button"
-    id="themeToggle"
-    aria-label="Toggle dark mode"
-  >
-    <span class="icon" aria-hidden="true">☀︎</span>
-    <span class="label">Light</span>
-  </button>
+    <header class="name-row">
+      <h1 class="name-heading">Shay Neufeld</h1>
+      <button
+        class="theme-toggle"
+        type="button"
+        id="themeToggle"
+        aria-label="Toggle dark mode"
+      >
+        <span class="icon" aria-hidden="true">☀︎</span>
+        <span class="label">Light</span>
+      </button>
     </header>
-
 
     <section class="bio">
       <p>
-        <strong>Shay Neufeld</strong> is a neuroscientist, product builder, and team leader.
-        He is currently developing brain–machine interface technology to help people recover
-        function after brain injury and disease.
+        I'm a neurotechnologist and engineering leader building 
+        implantable brain–computer interfaces to restore function 
+        after brain injury and disease.
       </p>
     </section>
 
     <nav class="links" aria-label="External links">
       <!-- Email -->
-      <a class="link-pill" href="mailto:contact@shayneufeld.com">
+      <a class="link-pill" href="mailto:contact@shayneufeld.com" aria-label="Email Shay Neufeld">
         <svg viewBox="0 0 24 24" aria-hidden="true">
           <path
             fill="none"
@@ -277,7 +304,7 @@
       </a>
 
       <!-- LinkedIn -->
-      <a class="link-pill" href="https://www.linkedin.com/in/shay-neufeld/" target="_blank" rel="noopener noreferrer">
+      <a class="link-pill" href="https://www.linkedin.com/in/shay-neufeld/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
         <svg viewBox="0 0 24 24" aria-hidden="true">
           <path
             fill="currentColor"
@@ -287,7 +314,7 @@
       </a>
 
       <!-- Google Scholar -->
-      <a class="link-pill scholar" href="https://scholar.google.com/citations?user=iYgfipIAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">
+      <a class="link-pill scholar" href="https://scholar.google.com/citations?user=iYgfipIAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar">
         <svg viewBox="0 0 20 20" aria-hidden="true">
           <path
             fill="currentColor"
@@ -297,7 +324,7 @@
       </a>
 
       <!-- Bluesky -->
-      <a class="link-pill" href="https://bsky.app/profile/shayneufeld.ca" target="_blank" rel="noopener noreferrer">
+      <a class="link-pill" href="https://bsky.app/profile/shayneufeld.ca" target="_blank" rel="noopener noreferrer" aria-label="Bluesky">
         <svg viewBox="0 0 64 64" aria-hidden="true">
           <path
             fill="currentColor"
