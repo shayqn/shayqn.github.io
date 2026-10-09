@@ -1,24 +1,36 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
-<link rel="icon" type="image/png" href="/favicon.svg" sizes="32x32">
-<link rel="apple-touch-icon" href="/favicon.png">
 <head>
   <meta charset="UTF-8" />
-  <title>Shay Neufeld – Neuroscientist & Product Leader</title>
+  <title>Shay Neufeld – Neuroscientist & Technology Leader</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="description" content="Official website of Shay Neufeld, neuroscientist, 
-                                  product builder, and team leader developing brain–machine 
-                                  interface technology to help people recover function after 
-                                  brain injury and disease." />
-  
+  <meta name="description" content="Shay Neufeld is a neuroscientist and technology leader who leads software at Epia Neuro, developing an implantable brain–computer interface to help people regain movement after stroke." />
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="apple-touch-icon" href="/favicon.png" />
+
+  <!-- Set theme before first paint to avoid a light-mode flash -->
+  <script>
+    (function () {
+      var theme = null;
+      try { theme = localStorage.getItem('shay-theme'); } catch (e) {}
+      if (!theme && window.matchMedia &&
+          window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        theme = 'dark';
+      }
+      document.documentElement.setAttribute('data-theme', theme || 'light');
+    })();
+  </script>
+
   <!-- Canonical to .com -->
   <link rel="canonical" href="https://shayneufeld.com/" />
 
   <!-- Open Graph / social previews -->
   <meta property="og:type"        content="website" />
   <meta property="og:url"         content="https://shayneufeld.com/" />
-  <meta property="og:title"       content="Shay Neufeld – Neuroscientist & Product Leader" />
-  <meta property="og:description" content="Neuroscientist, product builder, and team leader developing brain–machine interface technology to help people recover function after brain injury and disease." />
+  <meta property="og:title"       content="Shay Neufeld – Neuroscientist & Technology Leader" />
+  <meta property="og:description" content="Neuroscientist and technology leader building software for an implantable brain–computer interface to help people regain movement after stroke." />
   <meta property="og:image"       content="https://shayneufeld.com/shay-headshot.jpeg" />
   <meta name="twitter:card"       content="summary_large_image" />
   <meta name="twitter:site"       content="@noisyneuron" />
@@ -31,8 +43,13 @@
     "name": "Shay Neufeld",
     "url": "https://shayneufeld.com/",
     "image": "https://shayneufeld.com/shay-headshot.jpeg",
-    "jobTitle": "Neuroscientist and Product Leader",
-    "description": "Neuroscientist, product builder, and team leader developing brain–computer interface technology.",
+    "jobTitle": "Neuroscientist and Technology Leader",
+    "description": "Neuroscientist and technology leader building software for an implantable brain–computer interface to help people regain movement after stroke.",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Epia Neuro",
+      "url": "https://epianeuro.com/"
+    },
     "sameAs": [
       "https://ca.linkedin.com/in/shay-neufeld",
       "https://scholar.google.com/citations?user=iYgfipIAAAAJ",
@@ -167,6 +184,21 @@
       margin-bottom: 20px;
     }
 
+    .bio p + p {
+      margin-top: 12px;
+    }
+
+    .bio a {
+      color: var(--link-color);
+      text-decoration: none;
+      transition: color var(--transition-speed) ease;
+    }
+
+    .bio a:hover {
+      color: var(--link-hover-color);
+      text-decoration: underline;
+    }
+
     /* Links row */
     .links {
     display: flex;
@@ -282,9 +314,23 @@
 
     <section class="bio">
       <p>
-        I'm a neurotechnologist and engineering leader building 
-        implantable brain–computer interfaces to restore function 
-        after brain injury and disease.
+        I'm a neuroscientist by training and a technology leader by profession.
+        I've spent my career working across neuroscience, machine learning, and
+        software, finding ways to turn science into useful products.
+      </p>
+      <p>
+        I currently lead software at
+        <a href="https://epianeuro.com/" target="_blank" rel="noopener noreferrer">Epia Neuro</a>, where we're developing an
+        implantable brain–computer interface to help people regain movement
+        after stroke. My team builds software across embedded systems, machine
+        learning, computer vision, robotics controls, mobile apps, and cloud
+        infrastructure.
+      </p>
+      <p>
+        I particularly enjoy bringing scientists and engineers together to solve
+        difficult problems. I'm equally interested in the human side of building
+        companies: assembling strong teams, developing people, and creating the
+        conditions for them to do their best work.
       </p>
     </section>
 
