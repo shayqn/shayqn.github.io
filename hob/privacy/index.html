@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <title>HOB Privacy Policy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex" />
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/png" href="/favicon.png" />
+
+  <!-- Set theme before first paint to avoid a light-mode flash -->
+  <script>
+    (function () {
+      var theme = null;
+      try { theme = localStorage.getItem('shay-theme'); } catch (e) {}
+      if (!theme && window.matchMedia &&
+          window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        theme = 'dark';
+      }
+      document.documentElement.setAttribute('data-theme', theme || 'light');
+    })();
+  </script>
+
+  <style>
+    :root {
+      --bg-color: #f5f5f7;
+      --text-color: #111111;
+      --muted-color: #555555;
+      --link-color: #2563eb;
+      --link-hover-color: #1d4ed8;
+      --border-color: rgba(0,0,0,0.08);
+      --shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.10);
+    }
+
+    [data-theme="dark"] {
+      --bg-color: #050816;
+      --text-color: #e5e7eb;
+      --muted-color: #9ca3af;
+      --link-color: #60a5fa;
+      --link-hover-color: #93c5fd;
+      --border-color: rgba(148,163,184,0.35);
+      --shadow-soft: 0 22px 60px rgba(0,0,0,0.7);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      height: 100%;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+                   "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    .shell {
+      max-width: 640px;
+      width: 100%;
+      border-radius: 18px;
+      padding: 28px 28px 24px;
+      background: var(--bg-color);
+      box-shadow: var(--shadow-soft);
+      border: 1px solid var(--border-color);
+    }
+
+    h1 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 0.98rem;
+      line-height: 1.6;
+      color: var(--muted-color);
+    }
+
+    p + p {
+      margin-top: 12px;
+    }
+
+    .meta {
+      font-size: 0.85rem;
+    }
+
+    a {
+      color: var(--link-color);
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: var(--link-hover-color);
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      .shell {
+        padding: 22px 18px 18px;
+        border-radius: 16px;
+      }
+
+      h1 {
+        font-size: 1.25rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <h1>HOB Privacy Policy</h1>
+    <p>HOB is operated by its owner for personal household tasks.</p>
+    <p>HOB accesses provided and connected data to carry out owner-requested tasks. Relevant data may be processed on the operator’s infrastructure and by configured third-party AI providers, subject to those providers’ terms and privacy policies.</p>
+    <p>HOB does not sell Google user data or use it for advertising. Credentials and operational data may be stored on the operator’s infrastructure. The owner controls retention and deletion of HOB’s stored data.</p>
+    <p>The owner can revoke HOB’s access through their Google Account’s third-party connections settings. Revoking access does not delete previously stored data.</p>
+    <p class="meta">Contact: <a href="mailto:contact@shayneufeld.com">contact@shayneufeld.com</a></p>
+    <p class="meta">Last updated: <time datetime="2026-10-16">October 16, 2026</time></p>
+  </main>
+</body>
+</html>
